@@ -1,51 +1,88 @@
+// jQuery methods go here...
+// TODO: function to track time of each timeblock
+// TODO: create function to change color of timeblock with past present and future
+// TODO: save text information to local storage, and retrieve from local storage
 $(document).ready(function () {
-  // jQuery methods go here...
-  // TODO: function to track time of each timeblock
-  // TODO: create function to change color of timeblock with past present and future
-  // TODO: save text information to local storage, and retrieve from local storage
-});
+  /*Handles date display in header */
+  var currentDay = moment();
+  console.log("today", currentDay);
 
-/*Handles date display in header */
-var currentDay = moment();
-console.log("today", currentDay);
+  $("#currentDay").text(currentDay.format("MMM Do, YYYY"));
+  // To handle color for textblocks according to time
+  function displayColor() {
+    var timeDay = moment().hour();
 
-$("#currentDay").text(currentDay.format("MMM Do, YYYY"));
+    console.log("timeDay = ", timeDay);
+    $(".time-block").each(function () {
+      var colorTime = parseInt($(this).attr("id"));
+      console.log("colortime = ", colorTime);
+      if (colorTime < timeDay) {
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+        $(this).addClass("past");
+      } else if (colorTime === timeDay) {
+        $(this).removeClass("future");
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      }
+    });
+  }
 
-//Save button for local storage
-$(".saveBtn").click(function () {
-  var nineAMText = document.getElementById("9am").value;
-  localStorage.setItem("todo-9am", "nineAMText");
-  console.log(nineAMText);
+  //Save button for local storage
 
-  var tenAMText = document.getElementById("10am").value;
-  localStorage.setItem("todo-10am", "tenAMText");
-  console.log(tenAMText);
+  $(".saveBtn").click(function () {
+    var userText = $(this).siblings(".description").val();
+    console.log("userText = ", userText);
+    var userTime = $(this).parent().attr("id");
+    console.log("userTime = ", userTime);
+    localStorage.setItem(userTime, userText);
+  });
 
-  var elevenAMText = document.getElementById("11am").value;
-  localStorage.setItem("todo-11am", "elevenAMText");
-  console.log(elevenAMText);
+  //Pull text info from local storage
+  var retrieve = localStorage.getItem("9");
+  console.log(retrieve);
+  $("#9 .description").val(retrieve);
 
-  var twelvePMText = document.getElementById("12pm").value;
-  localStorage.setItem("todo-12pm", "twelvePMText");
-  console.log(twelvePMText);
+  retrieve = localStorage.getItem("10");
+  console.log(retrieve);
+  $("#10 .description").val(retrieve);
 
-  var onePMText = document.getElementById("1pm").value;
-  localStorage.setItem("todo-1pm", "onePMText");
-  console.log(onePMText);
+  retrieve = localStorage.getItem("11");
+  console.log(retrieve);
+  $("#11 .description").val(retrieve);
 
-  var twoPMText = document.getElementById("2pm").value;
-  localStorage.setItem("todo-2pm", "twoPMText");
-  console.log(twoPMText);
+  retrieve = localStorage.getItem("12");
+  console.log(retrieve);
+  $("#12 .description").val(retrieve);
 
-  var threePMText = document.getElementById("3pm").value;
-  localStorage.setItem("todo-3pm", "threePMText");
-  console.log(threePMText);
+  retrieve = localStorage.getItem("13");
+  console.log(retrieve);
+  $("#13 .description").val(retrieve);
 
-  var fourPMText = document.getElementById("4pm").value;
-  localStorage.setItem("todo-4pm", "fourPMText");
-  console.log(fourPMText);
+  retrieve = localStorage.getItem("14");
+  console.log(retrieve);
+  $("#14 .description").val(retrieve);
 
-  var fivePMText = document.getElementById("5pm").value;
-  localStorage.setItem("todo-5pm", "fivePMText");
-  console.log(fivePMText);
+  retrieve = localStorage.getItem("15");
+  console.log(retrieve);
+  $("#15 .description").val(retrieve);
+
+  retrieve = localStorage.getItem("16");
+  console.log(retrieve);
+  $("#16 .description").val(retrieve);
+
+  retrieve = localStorage.getItem("17");
+  console.log(retrieve);
+  $("#17 .description").val(retrieve);
+
+  displayColor();
+  // document.getElementById("9am").value = retrieveNine;
+  // console.log(retrieveNine);
+
+  // var retrieveTen = localStorage.getItem("todo-10am");
+  // document.getElementById("10am").value = retrieveTen;
 });

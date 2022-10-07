@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -32,89 +32,82 @@
     </header>
 
     <div class="container">
-      <div class="col">
+      
         <!-- Timeblocks go here -->
 
         <!--TODO: label each button to the left of text field and add save function to button-->
         <!--TODO: ADD colors for past present and future functions-->
         <!--Added input group w/ buttons-->
+       
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="9am" type="text" class="form-control" placeholder="9AM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
+      
+
+        <div class="input-group mb-3 input-group-lg time-block" id="9" >
+          <div class="col-md-1 hour">9AM</div>
+          <input type="text" class="form-control description" placeholder="TODO" />
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
           </div>
-        </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input
-            id="10am"
+        <div class="input-group mb-3 input-group-lg time-block" id="10">
+          <div class="col-md-1 hour">10AM</div>
+          <input       
             type="text"
-            class="form-control"
-            placeholder="10AM"
+            class="form-control description"
+            placeholder="TODO"
           />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
+        <div class="input-group mb-3 input-group-lg time-block" id="11">
+          <div class="col-md-1 hour">11AM</div>
           <input
             id="11am"
             type="text"
-            class="form-control"
-            placeholder="11AM"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+            class="form-control description"
+            placeholder="TODO"
+          />          
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
+        <div class="input-group mb-3 input-group-lg time-block" id="12">
+          <div class="col-md-1 hour">12AM</div>
           <input
             id="12pm"
             type="text"
-            class="form-control"
-            placeholder="12pm"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+            class="form-control description"
+            placeholder="TODO"
+          />         
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="1pm" type="text" class="form-control" placeholder="1PM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+        <div class="input-group mb-3 input-group-lg time-block" id="13">
+          <div class="col-md-1 hour">1PM</div>
+          <input id="1pm" type="text" class="form-control description" placeholder="TODO" />
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="2pm" type="text" class="form-control" placeholder="2PM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+        <div class="input-group mb-3 input-group-lg time-block" id="14">
+          <div class="col-md-1 hour">2PM</div>
+          <input id="2pm" type="text" class="form-control description" placeholder="TODO" />
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="3pm" type="text" class="form-control" placeholder="3PM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+        <div class="input-group mb-3 input-group-lg time-block" id="15">
+          <div class="col-md-1 hour">3PM</div>
+          <input id="3pm" type="text" class="form-control description" placeholder="TODO" />
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="4pm" type="text" class="form-control" placeholder="4PM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+        <div class="input-group mb-3 input-group-lg time-block" id="16">
+          <div class="col-md-1 hour">4PM</div>
+          <input id="4pm" type="text" class="form-control description" placeholder="TODO" />
+          <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
 
-        <div class="input-group mb-3 input-group-lg">
-          <input id="5pm" type="text" class="form-control" placeholder="5PM" />
-          <div class="input-group-append">
-            <button class="btn btn-info saveBtn" type="submit">Save</button>
-          </div>
+        <div class="input-group mb-3 input-group-lg time-block" id="17"> 
+          <div class="col-md-1 hour">5PM</div>
+          <input id="5pm" type="text" class="form-control description" placeholder="TODO" />
+           <button class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
       </div>
     </div>
