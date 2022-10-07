@@ -8,8 +8,8 @@ Use this Day Scheduler to keep track of your to-do list for the day. It runs wit
 
 Use this to help organize your daily life hour by hour.
 
-![The following is a screenshot of the application.](/assets/random-password-screenshot.jpg)
+![The following is a screenshot of the application.](/assets/Screenshot%202022-10-06%20203642.png)
 
 ## Credits
 
-Thank you to my tutor and classmates.
+Thank you to my tutor Suresh and classmates.
